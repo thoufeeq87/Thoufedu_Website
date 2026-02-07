@@ -45,7 +45,16 @@ SECRET_KEY = os.environ.get(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DJANGO_DEBUG", "0") == "1"
 
-ALLOWED_HOSTS = ["thoufedu.com", "www.thoufedu.com", "127.0.0.1", "localhost"]
+ALLOWED_HOSTS = [
+    "thoufedu.com",
+    "www.thoufedu.com",
+    "127.0.0.1",
+    "localhost",
+    "104.131.175.143",
+]
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True
 
 
 # Application definition
