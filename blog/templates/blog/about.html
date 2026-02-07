@@ -16,8 +16,19 @@
     <div class="about__body">
       {% if about_page.content_html %}
         {{ about_page.content_html|safe }}
-      {% else %}
+      {% elif about_page.body %}
         {{ about_page.body|safe }}
+      {% else %}
+        <p>Hello! I’m Mohamed Thoufeeq, the creator of ThoufEdu.</p>
+        <p>
+          This space is where I share practical AI workflows, tools, and lessons
+          learned from building real projects. I focus on clarity, simplicity,
+          and results you can apply immediately.
+        </p>
+        <p>
+          If you’d like to collaborate or learn more, feel free to reach out via
+          the Contact page.
+        </p>
       {% endif %}
     </div>
   </section>
