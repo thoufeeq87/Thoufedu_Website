@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %}
+
+{% block title %}{{ post.title }} | ThoufEdu{% endblock %}
+
+{% block content %}
+  <article class="detail">
+    <header class="detail__header">
+      <p class="detail__eyebrow">Blog Post</p>
+      <h1 class="detail__title">{{ post.title }}</h1>
+      <div class="detail__meta">
+        <span class="author">{{ site_author }}</span>
+        <span class="date">{{ post.created_at|date:"M j, Y" }}</span>
+      </div>
+    </header>
+
+    {% if post.header_image %}
+      <div class="detail__hero">
+        <img src="{{ post.header_image.url }}" alt="{{ post.title }}">
+      </div>
+    {% endif %}
+
+    <section class="detail__content">
+      {% if post.content_html %}
+        {{ post.content_html|safe }}
+      {% else %}
+        {{ post.body|safe }}
+      {% endif %}
+    </section>
+  </article>
+{% endblock %}

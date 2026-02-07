@@ -1,0 +1,36 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Home | ThoufEdu{% endblock %}
+
+{% block content %}
+  <section class="landing">
+    <div class="landing__content">
+      <p class="landing__eyebrow">Welcome to ThoufEdu</p>
+      <h1 class="landing__title">Practical AI insights for builders and learners.</h1>
+      <p class="landing__subtitle">
+        Explore concise, actionable articles on AI tools, workflows, and real-world
+        applications. New posts are published regularly.
+      </p>
+      <div class="landing__actions">
+        <a class="button button--primary" href="{% url 'blog' %}">Read the Blog</a>
+        <a class="button button--ghost" href="{% url 'about' %}">About Me</a>
+      </div>
+    </div>
+    <div class="landing__panel">
+      <div class="media media--large"></div>
+    </div>
+  </section>
+
+  <section class="landing__section">
+    <div class="section__card">
+      <h2>Latest Articles</h2>
+      <p>Visit the blog to read the newest posts and featured insights.</p>
+      <a class="text-link" href="{% url 'blog' %}">Go to Blog →</a>
+    </div>
+    <div class="section__card">
+      <h2>Work with Me</h2>
+      <p>Looking for AI consulting or project guidance? Reach out anytime.</p>
+      <a class="text-link" href="{% url 'contact' %}">Contact Me →</a>
+    </div>
+  </section>
+{% endblock %}

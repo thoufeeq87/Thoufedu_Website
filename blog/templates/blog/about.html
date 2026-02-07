@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %}
+
+{% block title %}{{ about_page.title }} | ThoufEdu{% endblock %}
+
+{% block content %}
+  <section class="page-section">
+    <h1>{{ about_page.title }}</h1>
+    {% if about_page.subtitle %}
+      <p class="page-section__subtitle">{{ about_page.subtitle }}</p>
+    {% endif %}
+    {% if about_page.image %}
+      <div class="about__image">
+        <img src="{{ about_page.image.url }}" alt="{{ about_page.title }}">
+      </div>
+    {% endif %}
+    <div class="about__body">
+      {% if about_page.content_html %}
+        {{ about_page.content_html|safe }}
+      {% else %}
+        {{ about_page.body|safe }}
+      {% endif %}
+    </div>
+  </section>
+{% endblock %}

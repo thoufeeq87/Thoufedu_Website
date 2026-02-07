@@ -1,0 +1,15 @@
+.quill-wrapper {
+  border: 1px solid #c9d1e1;
+  border-radius: 8px;
+  background: #ffffff;
+  max-width: 980px;
+}
+
+.quill-toolbar {
+  border-bottom: 1px solid #e1e6ef;
+  border-radius: 8px 8px 0 0;
+}
+
+.quill-editor {
+  min-height: 260px;
+}
